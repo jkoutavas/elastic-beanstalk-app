@@ -42,7 +42,7 @@ resource "aws_elastic_beanstalk_application_version" "eb_app_ver" {
   bucket      = aws_s3_bucket.eb_bucket.id                    # S3 bucket name
   key         = aws_s3_bucket_object.eb_bucket_obj.id         # S3 key path 
   application = aws_elastic_beanstalk_application.eb_app.name # Elastic Beanstalk application name
-  name        = var.version                                   # Version label for Elastic Beanstalk application
+  name        = var.appversion                                # Version label for Elastic Beanstalk application
 }
 
 resource "aws_elastic_beanstalk_environment" "tfenv" {
