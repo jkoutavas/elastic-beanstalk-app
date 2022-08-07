@@ -16,7 +16,7 @@ terraform {
 # AWS Provider configuration
 provider "aws" {
   profile = "default"   # AWS profile 
-  region  = "us-east-2" # AWS region
+  region  = "us-east-1" # AWS region
 }
 
 # Create S3 bucket for Python Flask app
