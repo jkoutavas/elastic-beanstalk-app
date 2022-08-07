@@ -1,13 +1,13 @@
-#terraform {
-#  backend "s3" {
-#    bucket         = "enes-beanstalk"
-#    key            = "state/terraform.tfstate"
-#    region         = "us-east-1"
-#    encrypt        = true
-#    kms_key_id     = "alias/terraform-bucket-key-enes-beanstalk"
-#    dynamodb_table = "terraform-enes-beanstalk"
-#  }
-#}
+terraform {
+  backend "s3" {
+    bucket         = "enes-beanstalk"
+    key            = "state/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    kms_key_id     = "alias/terraform-bucket-key-enes-beanstalk"
+    dynamodb_table = "terraform-state-enes-beanstalk"
+  }
+}
 
 resource "aws_kms_key" "terraform-bucket-key" {
   description             = "This key is used to encrypt bucket objects"
@@ -21,7 +21,7 @@ resource "aws_kms_alias" "key-alias" {
 }
 
 resource "aws_s3_bucket" "terraform-state" {
-  bucket = "tf-state-enes-beanstalk"
+  bucket = "enes-beanstalk"
   acl    = "private"
 
   versioning {
