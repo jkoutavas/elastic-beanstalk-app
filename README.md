@@ -89,7 +89,7 @@ You need to define your application version number and platform operating system
 - Deployment fails in Terraform stages when you type a value for `solution_stack_name` if it is not valid or not supported in Amazon Web Services (AWS).
 
 ```
-solution_stack_name = "64bit Amazon Linux 2 v3.3.11 running Python 3.8"
+solution_stack_name = "64bit Amazon Linux 2 v3.3.15 running Python 3.8"
 description         = "environment for flask app"
 ```
 
