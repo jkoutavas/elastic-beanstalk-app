@@ -1,6 +1,3 @@
-variable "environment" {
-  type = string
-}
-variable "project" {
+variable "appversion" {
   type = string
 }

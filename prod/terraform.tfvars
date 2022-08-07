@@ -1,2 +1,1 @@
-environment = "prod"
-project     = "enes"
+appversion = "1.0"
